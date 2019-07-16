@@ -7,3 +7,5 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+
+<?php echo do_shortcode('[lqp_life_form]'); ?>
