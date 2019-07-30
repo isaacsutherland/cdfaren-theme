@@ -7,17 +7,53 @@ html {
 
 html, body {
   height: 100%;
+  margin: 0;
 }
 
 body {
   font-family: $sans;
 }
 
-a {
-    color: #3897f0;
-    text-decoration: none
+.logo {
+    position: absolute;
+    width: 240px;
+    height: 110px;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-position: 0 -6px;
+        object-fit: cover;
+    }
+    span {
+        position: absolute;
+        color: #fff;
+        z-index: 1;
+        width: 100%;
+        bottom: 0;
+        line-height: 36px;
+        text-align: center;
+        text-decoration: underline;
+    }
 }
 
-a:hover {
-    text-decoration: underline
+.navtop {
+	border-top: 30px solid #37f;
+	display: flex;
+	flex-wrap: wrap;
+	.fill { width: 240px; }
+
+	span, a {
+		line-height: 80px;
+		padding: 0 20px;
+		color: #37f;
+		font-weight: bold;
+        background: #eee;
+	}
+	a {
+		font-size: 30px;
+		flex-grow: 1;
+		text-align: right;
+		text-decoration: none;
+	}
 }
