@@ -15,6 +15,7 @@ body {
 }
 
 .logo {
+    cursor: pointer;
     position: absolute;
     width: 240px;
     height: 110px;
@@ -36,19 +37,22 @@ body {
         text-decoration: underline;
     }
 }
+.logo:hover {
+    font-weight: bold;
+}
 
 .navtop {
 	border-top: 30px solid #37f;
 	display: flex;
 	flex-wrap: wrap;
 	.fill { width: 240px; }
+    background: #eee;
 
 	span, a {
 		line-height: 80px;
 		padding: 0 20px;
 		color: #37f;
 		font-weight: bold;
-        background: #eee;
 	}
 	a {
 		font-size: 30px;

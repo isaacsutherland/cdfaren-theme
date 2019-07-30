@@ -14,7 +14,7 @@ $logo = "$base/i/far-logo.png";
 	</head>
 	<body <?php body_class(); ?>>
 
-<a class="logo">
+<a class="logo" href="/contact">
     <img src="<?php echo $logo ?>"/>
     <span>Ottawa - Contact Us</span>
 </a>
