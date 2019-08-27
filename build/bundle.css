@@ -119,3 +119,87 @@ body {
       background: #ddf;
       text-shadow: none; } }
 
+article > .block {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 50px 90px; }
+  article > .block .big-blurb {
+    font-size: 27px;
+    text-align: center;
+    margin: 40px 0; }
+  article > .block .red {
+    color: #24e; }
+  article > .block .small-blurb {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 40px 0; }
+  article > .block .med-blurb {
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+    margin: 40px 0; }
+  article > .block hr {
+    width: 100%; }
+  article > .block ul {
+    padding: 0;
+    margin: 0;
+    width: 48%;
+    width: calc(50% - 20px); }
+  article > .block ul.left {
+    float: left; }
+  article > .block ul.right {
+    float: right; }
+  article > .block ul li {
+    background: url(/i/heart-bullet.gif) no-repeat 0 3px;
+    list-style: none;
+    padding: 0 0 15px 30px; }
+  article > .block .clear {
+    clear: both;
+    display: block; }
+
+@media (max-width: 900px) {
+  article > .block {
+    margin: 50px 10vw; }
+    article > .block ul {
+      width: 100% !important; } }
+
+.summary {
+  background: #f0f0dc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  text-align: center;
+  overflow: auto;
+  padding: 0 1em 4em 1em; }
+  .summary .arrow {
+    display: block;
+    border-top: 30px solid white;
+    border-left: 40px solid #f0f0dc;
+    border-right: 40px solid #f0f0dc;
+    margin-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0; }
+  .summary .headline {
+    font-size: 1.6em;
+    font-weight: 600; }
+  .summary .headline b {
+    text-transform: uppercase; }
+  .summary .headline i {
+    font-style: normal;
+    color: #24e; }
+  .summary .item div {
+    padding: 2em 2em 0 2em; }
+  .summary .item b {
+    font-weight: 600;
+    display: block; }
+  .summary .item i {
+    font-weight: 300;
+    font-size: 36px;
+    font-style: normal;
+    color: #24e;
+    display: block; }
+
+@media (min-width: 900px) {
+  .summary .item {
+    float: left;
+    width: 33%; } }
+

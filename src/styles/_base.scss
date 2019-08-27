@@ -128,3 +128,98 @@ body {
         }
     }
 }
+
+
+article > .block {
+    font-family: $sans;
+    margin: 50px 90px;
+
+    .big-blurb {
+        font-size: 27px;
+        text-align: center;
+        margin: 40px 0;
+    }
+    .red {
+        color: $cHighlight2;
+    }
+    .small-blurb {
+        font-size: 16px;
+        line-height: 26px;
+        margin: 40px 0;
+    }
+    .med-blurb {
+        font-size: 19px;
+        font-weight: 600;
+        text-align: center;
+        margin: 40px 0;
+    }
+    hr {
+        width: 100%;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        width: 48%;
+        width: calc(50% - 20px);
+    }
+    ul.left { float: left; }
+    ul.right { float: right; }
+    ul li {
+        background: url(/i/heart-bullet.gif) no-repeat 0 3px;
+        list-style: none;
+        padding: 0 0 15px 30px;
+    }
+    .clear { clear: both; display: block; }
+}
+@media (max-width:900px) {
+    article > .block {
+        margin: 50px 10vw;
+        ul {
+            width: 100%!important;
+        }
+    }
+}
+
+    .summary {
+        background: #f0f0dc;
+        font-family: $sans;
+        font-size: 16px;
+        text-align: center;
+        overflow: auto;
+        padding: 0 1em 4em 1em;
+
+        .arrow { @include arrow(white, #f0f0dc, 3em); }
+        .headline {
+            font-size: 1.6em;
+            font-weight: 600;
+        }
+        .headline b {
+            text-transform: uppercase;
+        }
+        .headline i {
+            font-style: normal;
+            color: $cHighlight2;
+        }
+        .item div {
+            padding: 2em 2em 0 2em;
+        }
+        .item b {
+            font-weight: 600;
+            display: block;
+        }
+        .item i {
+            font-weight: 300;
+            font-size: 36px;
+            font-style: normal;
+            color: $cHighlight2;
+            display: block;
+        }
+    }
+
+    @media (min-width:900px) {
+        .summary .item {
+            float: left;
+            width: 33%;
+        }
+    }
+

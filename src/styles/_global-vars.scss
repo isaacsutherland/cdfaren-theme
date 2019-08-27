@@ -3,3 +3,19 @@
 // -------------------------
 $sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $serif: Georgia, serif !default;
+
+$cHighlight1: #37f; // page top highlight and others
+$cHighlight2: #24e; // important text
+$cHighlight3: #8af; // important text
+
+@mixin arrow($color1, $color2, $margin) {
+    display: block;
+    border-top: 30px solid $color1;
+    border-left: 40px solid $color2;
+    border-right: 40px solid $color2;
+    margin-bottom: $margin;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0;
+}
+
