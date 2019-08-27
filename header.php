@@ -46,6 +46,3 @@ ham.addEventListener('click', function(e) {
     e.preventDefault();
 });
 </script>
-<?php
-echo do_shortcode('[lqp_life_form]');
-?>
