@@ -7,17 +7,47 @@
 		<?php wp_head(); ?>
 <?php
 
-$base = get_template_directory_uri();
-$logo = "$base/i/far-logo.png";
-
 ?>
 	</head>
 	<body <?php body_class(); ?>>
 
-<a class="logo" href="/contact">
-    <img src="<?php echo $logo ?>"/>
-    <span>Ottawa - Contact Us</span>
-</a>
+<?php
+
+function transformLogoMenu() {
+    $base = get_template_directory_uri();
+    $logo = "$base/i/far-logo.png";
+    $html = wp_nav_menu(array(
+        'theme_location' => 'logo_menu',
+        'container' => false,
+        'echo' => false,
+        'items_wrap' => '%3$s',
+    ));
+    preg_match('/<a .*?href="(?P<href>.*?)".*?>(?P<label>.*?)<\\/a>/', $html, $m);
+    echo sprintf('<a class="logo" href="%s"><img src="%s"><span>%s</span></a>', $m['href'], $logo, $m['label']);
+}
+
+transformLogoMenu();
+
+function transformTopMenu() {
+    $html = strip_tags(wp_nav_menu(array(
+        'theme_location' => 'top_menu',
+        'container' => false,
+        'items_wrap' => '%3$s',
+        'echo' => false,
+    )), '<a><br>');
+    preg_match_all('/<a .*?href="(?P<href>.*?)".*?>(?P<label>.*?)<\\/a>/', $html, $mm, PREG_SET_ORDER);
+    foreach ($mm as $m) {
+        preg_match_all('/<br/', $m['label'], $bb, PREG_SET_ORDER);
+        if (substr($m['href'], 0, 4) === 'tel:')
+            echo sprintf('<a class="tel" href="%s">%s</a>', $m['href'], $m['label']);
+        else if (count($bb) >= 1)
+            echo sprintf('<a class="link" href="%s">%s</a>', $m['href'], $m['label']);
+        else
+            echo sprintf('<a class="link oneline" href="%s">%s</a>', $m['href'], $m['label']);
+    }
+}
+
+?>
 
 <script>
 function hasClass(el, cls) { return !!el.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)')); }
@@ -28,13 +58,7 @@ function toggleClass(el, cls) { if (hasClass(el, cls)) removeClass(el, cls); els
 <div class="navtop">
 	<b class="fill"></b>
     <a class="ham" href="#">&#9776;</a>
-    <a class="link oneline" href="/">Home</a>
-    <a class="link" href="/simplified-life">No Medical<br/> Life Insurance</a>
-    <a class="link" href="/critical-illness">Critical Illness<br/> Insurance</a>
-    <a class="link" href="/health-and-dental">Health &amp; Dental<br/> Insurance</a>
-    <a class="link oneline" href="/travel">Travel Insurance</a>
-    <a class="link oneline" href="/about-us">About Us</a>
-	<a class="tel" href="tel:1-613-408-7002">1-613-408-7002</a>
+    <?php transformTopMenu() ?>
 </div>
 <script>
 var ham = document.querySelector('.ham'),
