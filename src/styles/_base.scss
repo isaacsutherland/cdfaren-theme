@@ -91,7 +91,7 @@ body {
 	}
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1000px) {
     .navtop {
         a.ham { display: block; }
         a.link {
@@ -129,6 +129,14 @@ body {
     }
 }
 
+section > h1 {
+    margin: 20px 90px;
+}
+@media (max-width: 900px) {
+    section > h1 {
+        margin: 20px 10vw;
+    }
+}
 
 article > .block {
     font-family: $sans;
@@ -180,46 +188,46 @@ article > .block {
     }
 }
 
-    .summary {
-        background: #f0f0dc;
-        font-family: $sans;
-        font-size: 16px;
-        text-align: center;
-        overflow: auto;
-        padding: 0 1em 4em 1em;
+.summary {
+    background: #f0f0dc;
+    font-family: $sans;
+    font-size: 16px;
+    text-align: center;
+    overflow: auto;
+    padding: 0 1em 4em 1em;
 
-        .arrow { @include arrow(white, #f0f0dc, 3em); }
-        .headline {
-            font-size: 1.6em;
-            font-weight: 600;
-        }
-        .headline b {
-            text-transform: uppercase;
-        }
-        .headline i {
-            font-style: normal;
-            color: $cHighlight2;
-        }
-        .item div {
-            padding: 2em 2em 0 2em;
-        }
-        .item b {
-            font-weight: 600;
-            display: block;
-        }
-        .item i {
-            font-weight: 300;
-            font-size: 36px;
-            font-style: normal;
-            color: $cHighlight2;
-            display: block;
-        }
+    .arrow { @include arrow(white, #f0f0dc, 3em); }
+    .headline {
+        font-size: 1.6em;
+        font-weight: 600;
     }
+    .headline b {
+        text-transform: uppercase;
+    }
+    .headline i {
+        font-style: normal;
+        color: $cHighlight2;
+    }
+    .item div {
+        padding: 2em 2em 0 2em;
+    }
+    .item b {
+        font-weight: 600;
+        display: block;
+    }
+    .item i {
+        font-weight: 300;
+        font-size: 36px;
+        font-style: normal;
+        color: $cHighlight2;
+        display: block;
+    }
+}
 
-    @media (min-width:900px) {
-        .summary .item {
-            float: left;
-            width: 33%;
-        }
+@media (min-width:900px) {
+    .summary .item {
+        float: left;
+        width: 33%;
     }
+}
 
