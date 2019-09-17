@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Overpass:600,700i);
+@charset "UTF-8";
 html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -390,6 +391,190 @@ article > .block {
 @media (min-width: 857px) {
   .call2 {
     font-size: 30px; } }
+
+.power-banner {
+  background: #37f;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 60px 52px; }
+  .power-banner div {
+    margin: 0; }
+  .power-banner .medium {
+    font-size: 27px;
+    margin-bottom: 15px;
+    line-height: 30px; }
+  .power-banner .big {
+    font-size: 37px;
+    font-weight: 600;
+    vertical-align: baseline; }
+  .power-banner .small {
+    font-size: 14px;
+    margin-top: 22px; }
+
+.cards {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-left: 90px;
+  margin-right: 90px;
+  font-size: 0; }
+  .cards .arrow {
+    display: block;
+    border-top: 30px solid #f0f0dc;
+    border-left: 40px solid #fff;
+    border-right: 40px solid #fff;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0; }
+  .cards .title {
+    display: block;
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: 600;
+    margin: 15px 0 6px 0;
+    color: #000; }
+  .cards .blurb {
+    color: #000;
+    font-size: 14px;
+    line-height: 24px; }
+  .cards .card {
+    margin-bottom: 15px;
+    text-align: left;
+    vertical-align: top;
+    display: inline-block; }
+  .cards .more {
+    color: #24e;
+    white-space: nowrap; }
+  .cards .more::after {
+    content: "\00a0\00bb";
+    font-size: 130%;
+    font-weight: 600; }
+  .cards .half .card {
+    width: 48%; }
+  .cards .third .card {
+    width: 31.33333%; }
+  .cards .spacer {
+    display: inline-block;
+    width: 2%; }
+  .cards img {
+    width: 100%; }
+
+@media (max-width: 900px) {
+  .cards {
+    margin-left: 10vw;
+    margin-right: 10vw; }
+    .cards .half .card {
+      width: 100%; }
+    .cards .third .card {
+      width: 100%; } }
+
+.comparison {
+  padding: 0 90px 60px 90px; }
+  .comparison .arrow {
+    display: block;
+    border-top: 30px solid #37f;
+    border-left: 40px solid #fff;
+    border-right: 40px solid #fff;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0; }
+  .comparison .tabs {
+    font-size: 0; }
+  .comparison .tab {
+    font-size: 24px;
+    line-height: 50px;
+    color: #666;
+    font-weight: 600;
+    width: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    text-align: center; }
+  .comparison .tab.sel {
+    color: #24e;
+    cursor: default;
+    border: 1px solid black;
+    border-bottom: 1px solid transparent; }
+  .comparison .page {
+    border: 1px solid black;
+    border-top: none;
+    display: none;
+    padding: 2em;
+    font-size: 14px;
+    line-height: 24px; }
+  .comparison .page.sel {
+    display: block; }
+  .comparison h2 {
+    font-size: 19px;
+    line-height: 29px; }
+  .comparison ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .comparison li {
+    padding-left: 25px;
+    text-indent: -25px;
+    margin-bottom: 10px; }
+  .comparison li::before {
+    content: "»";
+    color: red;
+    width: 25px;
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: -25px;
+    font-weight: 600;
+    font-size: 150%;
+    line-height: 10px; }
+  .comparison .tiles {
+    margin-top: 30px;
+    font-size: 0;
+    position: relative; }
+    .comparison .tiles span:not(.link) {
+      font-weight: bold;
+      display: block;
+      font-size: 19px;
+      line-height: 29px;
+      margin: 0 0 8px 0;
+      padding: 0; }
+    .comparison .tiles .col {
+      width: 48%;
+      width: calc(50% - 10px); }
+    .comparison .tiles .col.left {
+      float: left; }
+    .comparison .tiles .col.right {
+      float: right; }
+    .comparison .tiles .clear {
+      clear: both;
+      display: block; }
+    .comparison .tiles .tile {
+      display: block;
+      background: #f2efe8;
+      padding: 20px 20px 25px 20px;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 20px;
+      color: #000; }
+      .comparison .tiles .tile span.link {
+        color: #24e;
+        white-space: nowrap; }
+      .comparison .tiles .tile span.link::after {
+        content: "\00a0\00bb";
+        font-size: 130%;
+        font-weight: 600; }
+
+@media (max-width: 900px) {
+  .comparison {
+    padding: 0 10vw 60px 10vw; }
+    .comparison .tab .hideme {
+      display: none; }
+    .comparison .tiles .col {
+      width: 100% !important;
+      float: none !important; } }
 
 .bio {
   margin: 40px; }
