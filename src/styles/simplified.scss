@@ -1,0 +1,140 @@
+$indent: 25px;
+
+.comparison {
+    padding: 0 90px 60px 90px;
+
+    .arrow {
+        @include arrow($cHighlight1, #fff, 60px);
+    }
+
+    .tabs {
+        font-size: 0;
+    }
+
+    .tab {
+        font-size: 24px;
+        line-height: 50px;
+        color: #666;
+        font-weight: 600;
+        width: 50%;
+        display: inline-block;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .tab.sel {
+        color: $cHighlight2;
+        cursor: default;
+        border: 1px solid black;
+        border-bottom: 1px solid transparent;
+    }
+
+    .page {
+        border: 1px solid black;
+        border-top: none;
+        display: none;
+        padding: 2em;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .page.sel {
+        display: block;
+    }
+
+    h2 {
+        font-size: 19px;
+        line-height: 29px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        padding-left: $indent;
+        text-indent: -$indent;
+        margin-bottom: 10px;
+    }
+    li::before {
+        content: "»";
+        color: red;
+        width: $indent;
+        display: inline-block;
+        margin-left: $indent;
+        margin-right: -$indent;
+        font-weight: 600;
+        font-size: 150%;
+        line-height: 10px;
+    }
+
+    .tiles {
+        margin-top: 30px;
+        font-size: 0;
+        position: relative;
+
+        span:not(.link) {
+            font-weight: bold;
+            display: block;
+            font-size: 19px;
+            line-height: 29px;
+            margin: 0 0 8px 0;
+            padding: 0;
+        }
+
+        .col {
+            width: 48%;
+            width: calc(50% - 10px);
+        }
+        .col.left {
+            float: left;
+        }
+        .col.right {
+            float: right;
+        }
+        .clear {
+            clear: both;
+            display: block;
+        }
+
+        .tile {
+            display: block;
+            background: #f2efe8;
+            padding: 20px 20px 25px 20px;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 20px;
+            color: #000;
+
+
+            span.link {
+                color: $cHighlight2;
+                white-space: nowrap;
+            }
+            span.link::after {
+                content: "\00a0\00bb";
+                font-size: 130%;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .comparison {
+        padding: 0 10vw 60px 10vw;
+
+        .tab .hideme {
+            display: none;
+        }
+
+        .tiles {
+            .col {
+                width: 100%!important;
+                float: none!important;
+            }
+        }
+    }
+}

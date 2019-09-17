@@ -431,5 +431,100 @@ article > .block {
     }
 }
 
+.power-banner {
+    background: $cHighlight1;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 60px 52px;
+
+    div {
+        margin: 0;
+    }
+
+    .medium {
+        font-size: 27px;
+        margin-bottom: 15px;
+        line-height: 30px;
+    }
+    .big {
+        font-size: 37px;
+        font-weight: 600;
+        vertical-align: baseline;
+    }
+    .small {
+        font-size: 14px;
+        margin-top: 22px;
+    }
+}
+
+
+.cards {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-left: 90px;
+    margin-right: 90px;
+    font-size: 0;
+
+    .arrow {
+        @include arrow(#f0f0dc, #fff, 60px);
+    }
+    .title {
+        display: block;
+        font-size: 19px;
+        line-height: 29px;
+        font-weight: 600;
+        margin: 15px 0 6px 0;
+        color: #000;
+    }
+    .blurb {
+        color: #000;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .card {
+        margin-bottom: 15px;
+        text-align: left;
+        vertical-align: top;
+        display: inline-block;
+    }
+    .more {
+        color: $cHighlight2;
+        white-space: nowrap;
+    }
+    .more::after {
+        content: "\00a0\00bb";
+        font-size: 130%;
+        font-weight: 600;
+    }
+    .half .card {
+        width: 48%;
+    }
+    .third .card {
+        width: 31.33333%;
+    }
+    .spacer {
+        display: inline-block;
+        width: 2%;
+    }
+    img {
+        width: 100%;
+    }
+}
+@media (max-width:900px) {
+    .cards {
+        margin-left: 10vw;
+        margin-right: 10vw;
+        .half .card {
+            width: 100%;
+        }
+        .third .card {
+            width: 100%;
+        }
+    }
+}
+
+@import 'simplified.scss';
 @import 'about-us.scss';
 
