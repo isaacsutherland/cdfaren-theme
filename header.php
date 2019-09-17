@@ -23,7 +23,7 @@ function transformLogoMenu() {
         'items_wrap' => '%3$s',
     ));
     preg_match('/<a .*?href="(?P<href>.*?)".*?>(?P<label>.*?)<\\/a>/', $html, $m);
-    echo sprintf('<a class="logo" href="%s"><img src="%s"><span>%s</span></a>', $m['href'], $logo, $m['label']);
+    echo sprintf('<a target="_blank" class="logo" href="%s"><img src="%s"><span>%s</span></a>', $m['href'], $logo, $m['label']);
 }
 
 transformLogoMenu();

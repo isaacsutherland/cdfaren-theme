@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Overpass:600,700i);
 html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -13,6 +14,23 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+a {
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+hr {
+  border: 0;
+  height: 3px;
+  width: 5vw;
+  text-align: left;
+  margin: 1em 0 .5em 0;
+  background: #37f;
+  box-shadow: 1px 1px 3px #fff, -1px -1px 3px #fff, -1px 1px 3px #fff, 1px -1px 3px #fff; }
 
 .logo {
   cursor: pointer;
@@ -120,11 +138,7 @@ body {
       text-shadow: none; } }
 
 section > h1 {
-  margin: 20px 90px; }
-
-@media (max-width: 900px) {
-  section > h1 {
-    margin: 20px 10vw; } }
+  display: none; }
 
 article > .block {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -209,4 +223,209 @@ article > .block {
   .summary .item {
     float: left;
     width: 33%; } }
+
+.title-banner {
+  border-top: 1px solid #ddd;
+  position: relative;
+  background: #d9d4d0;
+  height: 30vw;
+  max-height: calc((100vh - 95px)/2);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5vw;
+  text-shadow: 1px 1px 3px #fff, -1px -1px 3px #fff, -1px 1px 3px #fff, 1px -1px 3px #fff; }
+  .title-banner img {
+    position: absolute;
+    right: 0;
+    height: 30vw;
+    max-height: calc((100vh - 95px)/2);
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s; }
+  .title-banner table {
+    position: relative;
+    border-collapse: collapse;
+    margin-left: 5vw;
+    width: 53%;
+    height: 30vw;
+    max-height: calc((100vh - 95px)/2);
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s; }
+  .title-banner table em {
+    font-weight: 600;
+    font-size: 3vw;
+    color: #24e; }
+  .title-banner table small {
+    display: inline-block;
+    font-size: 1.5vw;
+    line-height: 1.3em;
+    font-style: italic; }
+  .title-banner .clickme {
+    position: relative;
+    display: inline-block;
+    margin: 1.0em 0 0 1.0em;
+    border-radius: 3em;
+    padding: 0 1.5em;
+    line-height: 2em;
+    color: #eee;
+    background: #37f;
+    font-weight: 700;
+    font-size: 2vw;
+    cursor: pointer;
+    -webkit-transition: background 0.15s, left .25s;
+    transition: background 0.15s, left .25s;
+    text-shadow: 1px 1px 3px #000, -1px -1px 3px #000, -1px 1px 3px #000, 1px -1px 3px #000; }
+  .title-banner .clickme:hover {
+    background: #036; }
+  .title-banner .note {
+    position: absolute;
+    bottom: 10px;
+    font-size: 1.5vw;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s; }
+  .title-banner .note .red {
+    color: #24e; }
+
+@media (max-width: 600px) {
+  /* set font sizes so they don't shrink beyond what is visible */
+  .title-banner {
+    min-height: 160px;
+    font-size: 15px; }
+    .title-banner img {
+      min-height: 160px;
+      opacity: .25; }
+    .title-banner table {
+      min-height: 160px; }
+    .title-banner table em {
+      font-size: 18px; }
+    .title-banner table small {
+      font-size: 9px; }
+    .title-banner .clickme {
+      font-size: 12px; }
+    .title-banner .clickme {
+      font-size: 9px; } }
+
+@media (min-width: 167vh) {
+  /* set font sizes so they don't continue to grow */
+  .title-banner {
+    height: 50vh;
+    font-size: 4.2vh; }
+    .title-banner img {
+      height: 50vh; }
+    .title-banner table {
+      height: 50vh; }
+    .title-banner table em {
+      font-size: 5vh; }
+    .title-banner table small {
+      font-size: 2.5vh; }
+    .title-banner .clickme {
+      font-size: 3.3vh; }
+    .title-banner .clickme {
+      font-size: 2.475vh; } }
+
+.call {
+  display: block;
+  font-size: 2.4vw;
+  padding: 1em 2em;
+  font-family: 'Overpass', sans-serif;
+  text-decoration: none;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  text-align: center; }
+  .call span {
+    text-decoration: underline;
+    color: #8af; }
+  .call span.tel {
+    white-space: nowrap;
+    color: #f00;
+    font-size: 140%;
+    vertical-align: middle;
+    text-decoration: none !important; }
+
+.call:hover span {
+  color: #acf; }
+
+@media (max-width: 667px) {
+  .call {
+    font-size: 16px; } }
+
+@media (min-width: 1250px) {
+  .call {
+    font-size: 30px; } }
+
+.call2 {
+  display: block;
+  font-size: 3.5vw;
+  padding: 1em 1em;
+  font-family: 'Overpass', sans-serif;
+  text-decoration: none;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  cursor: default; }
+  .call2 a {
+    display: block;
+    cursor: pointer;
+    color: #8af;
+    margin-top: .25em; }
+    .call2 a span.tel {
+      white-space: nowrap;
+      color: #f00;
+      font-size: 140%;
+      vertical-align: middle; }
+  .call2 a:hover span.tel {
+    color: #acf; }
+  .call2 a.onlinelink {
+    color: #fff;
+    text-decoration: underline;
+    margin-top: inherit; }
+
+@media (max-width: 400px) {
+  .call2 {
+    font-size: 14px; } }
+
+@media (max-width: 360px) {
+  .call2 a span.tel {
+    display: block; } }
+
+@media (min-width: 857px) {
+  .call2 {
+    font-size: 30px; } }
+
+.bio {
+  margin: 40px; }
+  .bio img {
+    height: 300px;
+    display: block;
+    margin-bottom: 10px; }
+  .bio .clear {
+    display: block;
+    clear: both;
+    background: green;
+    margin: 0;
+    padding: 0; }
+  .bio h2 {
+    margin: 0; }
+  .bio .tel {
+    white-space: nowrap;
+    color: #c00;
+    font-weight: 600;
+    font-size: 140%; }
+
+@media (min-width: 700px) {
+  .ben {
+    margin-left: 290px; }
+    .ben img {
+      float: left;
+      margin-left: -250px;
+      display: inherit;
+      margin-bottom: 0; } }
+
+@media (min-width: 1000px) {
+  .chris {
+    margin-left: 515px; }
+    .chris img {
+      float: left;
+      margin-left: -475px;
+      display: inherit;
+      margin-bottom: 0; } }
 

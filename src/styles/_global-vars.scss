@@ -19,3 +19,14 @@ $cHighlight3: #8af; // important text
     width: 0;
 }
 
+@function neg($val) {
+    @return -$val
+}
+
+@mixin myBoxShadow($jitter, $disperse, $color) {
+    box-shadow: $jitter $jitter $disperse $color, neg($jitter) neg($jitter) $disperse $color, neg($jitter) $jitter $disperse $color, $jitter neg($jitter) $disperse $color;
+}
+
+@mixin myTextShadow($jitter, $disperse, $color) {
+    text-shadow: $jitter $jitter $disperse $color, neg($jitter) neg($jitter) $disperse $color, neg($jitter) $jitter $disperse $color, $jitter neg($jitter) $disperse $color;
+}

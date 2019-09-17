@@ -18,6 +18,27 @@ body {
   font-family: $sans;
 }
 
+a { 
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+hr {
+    border: 0; 
+    height: 3px; 
+    width: 5vw;
+    text-align: left;
+    margin: 1em 0 .5em 0;
+    background: $cHighlight1;
+    @include myBoxShadow(1px,3px,#fff);
+}
+
+
 .logo {
     cursor: pointer;
     position: absolute;
@@ -129,14 +150,7 @@ body {
     }
 }
 
-section > h1 {
-    margin: 20px 90px;
-}
-@media (max-width: 900px) {
-    section > h1 {
-        margin: 20px 10vw;
-    }
-}
+section > h1 { display: none; }
 
 article > .block {
     font-family: $sans;
@@ -230,4 +244,192 @@ article > .block {
         width: 33%;
     }
 }
+
+@import url('https://fonts.googleapis.com/css?family=Overpass:600,700i');
+.title-banner {
+    border-top: 1px solid #ddd;
+    position: relative;
+    background: #d9d4d0;
+    height: 30vw;
+    max-height: calc((100vh - 95px)/2);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5vw;
+    @include myTextShadow(1px,3px,#fff);
+
+    img {
+        position: absolute;
+        right: 0;
+        height: 30vw;
+        max-height: calc((100vh - 95px)/2);
+        -webkit-transition: opacity .5s;
+        transition: opacity .5s;
+    }
+    table {
+        position: relative;
+        border-collapse: collapse;
+        margin-left: 5vw;
+        width: 53%;
+        height: 30vw;
+        max-height: calc((100vh - 95px)/2);
+        -webkit-transition: opacity .5s;
+        transition: opacity .5s;
+    }
+    table em {
+        font-weight: 600;
+        font-size: 3vw;
+        color: $cHighlight2;
+    }
+    table small {
+        display: inline-block;
+        font-size: 1.5vw;
+        line-height: 1.3em;
+        font-style: italic;
+    }
+    .clickme {
+        position: relative;
+        display: inline-block;
+        margin: 1.0em 0 0 1.0em;
+        border-radius: 3em;
+        padding: 0 1.5em;
+        line-height: 2em;
+        color: #eee;
+        background: $cHighlight1;
+        font-weight: 700;
+        font-size: 2vw;
+        cursor: pointer;
+        -webkit-transition: background 0.15s, left .25s;
+        transition: background 0.15s, left .25s;
+        @include myTextShadow(1px,3px,#000);
+    }
+    .clickme:hover {
+        background: #036;
+    }
+    .note {
+        position: absolute;
+        bottom: 10px;
+        font-size: 1.5vw;
+        -webkit-transition: opacity .5s;
+        transition: opacity .5s;
+    }
+    .note .red {
+        color: $cHighlight2;
+    }
+}
+
+@media (max-width: 600px) {
+    /* set font sizes so they don't shrink beyond what is visible */
+    .title-banner { min-height: 160px; font-size: 15px;
+        img { min-height: 160px; opacity: .25; }
+        table { min-height: 160px; }
+        table em { font-size: 18px; }
+        table small { font-size: 9px; }
+        .clickme { font-size: 12px; }
+        .clickme { font-size: 9px; }
+    }
+}
+@media (min-width: 167vh) {
+    /* set font sizes so they don't continue to grow */
+    .title-banner { height: 50vh; font-size: 4.2vh;
+        img { height: 50vh; }
+        table { height: 50vh; }
+        table em { font-size: 5vh; }
+        table small { font-size: 2.5vh; }
+        .clickme { font-size: 3.3vh; }
+        .clickme { font-size: 2.475vh; }
+    }
+}
+
+.call {
+    display: block;
+    font-size: 2.4vw;
+    padding: 1em 2em;
+    font-family: 'Overpass', sans-serif;
+    text-decoration: none;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+
+    span {
+        text-decoration: underline;
+        color: $cHighlight3;
+    }
+    span.tel {
+        white-space: nowrap;
+        color: #f00;
+        font-size: 140%;
+        vertical-align: middle;
+        text-decoration: none !important;
+    }
+}
+.call:hover {
+    span {
+        color: #acf;
+    }
+}
+@media (max-width: 667px) {
+    .call { font-size: 16px; }
+}
+@media (min-width: 1250px) {
+    .call { font-size: 30px; }
+}
+
+.call2 {
+    display: block;
+    font-size: 3.5vw;
+    padding: 1em 1em;
+    font-family: 'Overpass', sans-serif;
+    text-decoration: none;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    cursor: default;
+    
+    a {
+        display: block;
+        cursor: pointer;
+        color: $cHighlight3;
+        margin-top: .25em;
+
+        span.tel {
+            white-space: nowrap;
+            color: #f00;
+            font-size: 140%;
+            vertical-align: middle;
+        }
+    }
+
+    a:hover {
+        span.tel {
+            color: #acf;
+        }
+    }
+
+    a.onlinelink {
+        color: #fff;
+        text-decoration: underline;
+        margin-top: inherit;
+    }
+}
+@media (max-width: 400px) {
+    .call2 {
+        font-size: 14px;
+    }
+}
+@media (max-width: 360px) {
+    .call2 {
+        a {
+            span.tel {
+                display: block;
+            }
+        }
+    }
+}
+@media (min-width: 857px) {
+    .call2 {
+        font-size: 30px;
+    }
+}
+
+@import 'about-us.scss';
 

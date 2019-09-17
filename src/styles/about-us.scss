@@ -1,0 +1,30 @@
+.bio {
+    margin: 40px;
+    img { height: 300px; display: block; margin-bottom: 10px; }
+    .clear { display: block; clear: both; background: green; margin:0; padding:0; }
+    h2 { margin: 0; }
+
+    .tel {
+        white-space: nowrap;
+        color: #c00;
+        font-weight: 600;
+        font-size: 140%;
+    }
+}
+
+@media (min-width:700px) {
+$w1: 250;
+.ben {
+    margin-left: #{$w1+40}px;
+    img { float: left; margin-left: -#{$w1}px; display:inherit; margin-bottom: 0; }
+}
+}
+
+@media (min-width:1000px) {
+$w2: 475;
+.chris {
+    margin-left: #{$w2+40}px;
+    img { float: left; margin-left: -#{$w2}px; display:inherit; margin-bottom: 0; }
+}
+}
+
