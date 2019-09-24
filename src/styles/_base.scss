@@ -112,7 +112,7 @@ hr {
 	}
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .navtop {
         a.ham { display: block; }
         a.link {
@@ -149,8 +149,6 @@ hr {
         }
     }
 }
-
-section > h1 { display: none; }
 
 article > .block {
     font-family: $sans;

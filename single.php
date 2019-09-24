@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Page Template
+ * Template Name: Post Template
  * Template Post Type: page, post
  */
 get_header(); ?>
@@ -9,15 +9,22 @@ get_header(); ?>
 		<!-- section -->
 		<section>
 
+
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+                <div class="block">
 			
+			    <h1><?php the_title(); ?></h1>
+
 				<?php the_content(); ?>
 				
 
 				<?php edit_post_link(); ?>
+
+                </div>
 
 			</article>
 			<!-- /article -->
