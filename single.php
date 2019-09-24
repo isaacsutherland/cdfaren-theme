@@ -15,6 +15,8 @@ get_header(); ?>
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+                <a class="call" href="/">Don't wait! <span>Click here</span> to get your no-obligation life insurance quote in seconds!</a>
+
                 <div class="block">
 			
 			    <h1><?php the_title(); ?></h1>
