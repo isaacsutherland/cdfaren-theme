@@ -108,7 +108,6 @@ $indent: 25px;
             margin-bottom: 20px;
             color: #000;
 
-
             span.link {
                 color: $cHighlight2;
                 white-space: nowrap;
@@ -117,6 +116,11 @@ $indent: 25px;
                 content: "\00a0\00bb";
                 font-size: 130%;
                 font-weight: 600;
+            }
+
+            i {
+                display: block;
+                text-align: right;
             }
         }
     }

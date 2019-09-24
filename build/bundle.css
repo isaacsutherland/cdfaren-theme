@@ -563,6 +563,9 @@ article > .block {
         content: "\00a0\00bb";
         font-size: 130%;
         font-weight: 600; }
+      .comparison .tiles .tile i {
+        display: block;
+        text-align: right; }
 
 @media (max-width: 900px) {
   .comparison {
@@ -610,4 +613,16 @@ article > .block {
       margin-left: -475px;
       display: inherit;
       margin-bottom: 0; } }
+
+.testimonials {
+  margin-top: 0 !important; }
+  .testimonials .arrow {
+    display: block;
+    border-top: 30px solid #f0f0dc;
+    border-left: 40px solid white;
+    border-right: 40px solid white;
+    margin-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0; }
 

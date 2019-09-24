@@ -526,3 +526,7 @@ article > .block {
 @import 'simplified.scss';
 @import 'about-us.scss';
 
+.testimonials {
+    margin-top: 0 !important;
+    .arrow { @include arrow(#f0f0dc, white, 3em); }
+}
