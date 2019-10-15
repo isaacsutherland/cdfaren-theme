@@ -112,3 +112,9 @@ function add_slug_to_body_class($classes) {
     }
     return $classes;
 }
+
+// Function to change sender name
+function wpb_sender_name( $original_email_from ) {
+    return 'Far Insurance';
+}
+add_filter( 'wp_mail_from_name', 'wpb_sender_name' );
