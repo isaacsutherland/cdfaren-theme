@@ -38,6 +38,10 @@ hr {
     @include myBoxShadow(1px,3px,#fff);
 }
 
+h1 {
+    font-size: 1.6em;
+}
+
 
 .logo {
     cursor: pointer;
