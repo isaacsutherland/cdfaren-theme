@@ -534,3 +534,18 @@ article > .block {
     margin-top: 0 !important;
     .arrow { @include arrow(#f0f0dc, white, 3em); }
 }
+
+.bottom-menu {
+    box-shadow: 0 0 5px 5px #9bf;
+    margin: 10px 0 20px 0;
+    padding: 10px 20px;
+    background-color: #9bf;
+    text-align: center;
+    a {
+        text-decoration: underline;
+        color: #000;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

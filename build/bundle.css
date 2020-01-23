@@ -33,6 +33,9 @@ hr {
   background: #37f;
   box-shadow: 1px 1px 3px #fff, -1px -1px 3px #fff, -1px 1px 3px #fff, 1px -1px 3px #fff; }
 
+h1 {
+  font-size: 1.6em; }
+
 .logo {
   cursor: pointer;
   position: absolute;
@@ -625,4 +628,16 @@ article > .block {
     margin-left: auto;
     margin-right: auto;
     width: 0; }
+
+.bottom-menu {
+  box-shadow: 0 0 5px 5px #9bf;
+  margin: 10px 0 20px 0;
+  padding: 10px 20px;
+  background-color: #9bf;
+  text-align: center; }
+  .bottom-menu a {
+    text-decoration: underline;
+    color: #000; }
+    .bottom-menu a:hover {
+      text-decoration: none; }
 

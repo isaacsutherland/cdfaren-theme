@@ -50,6 +50,7 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'logo_menu' => __('Logo Link'),
         'top_menu' => __('Top Navbar'),
+        'bottom_menu' => __('Bottom Navbar'),
     ]);
     /**
      * Enable post thumbnails
