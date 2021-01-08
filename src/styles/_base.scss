@@ -266,6 +266,29 @@ article > .block {
         -webkit-transition: opacity .5s;
         transition: opacity .5s;
     }
+    &.apply {
+        img {
+            left: 0;
+            opacity: .8;
+        }
+        hr {
+            margin: .3em 0 .15em 0;
+            transition: margin .5s, height .5s;
+        }
+        table {
+            position: absolute;
+            height: 0;
+            bottom: .5em;
+            width: auto;
+        }
+        td {
+            vertical-align: bottom;
+            padding: .4em .8em;
+            background-color: rgba(255,255,255,.5);
+            border-radius: .5em;
+        }
+    }
+
     table {
         position: relative;
         border-collapse: collapse;
@@ -322,7 +345,7 @@ article > .block {
     /* set font sizes so they don't shrink beyond what is visible */
     .title-banner { min-height: 160px; font-size: 15px;
         img { min-height: 160px; opacity: .25; }
-        table { min-height: 160px; }
+        table {  }
         table em { font-size: 18px; }
         table small { font-size: 9px; }
         .clickme { font-size: 12px; }
@@ -339,6 +362,9 @@ article > .block {
         .clickme { font-size: 3.3vh; }
         .clickme { font-size: 2.475vh; }
     }
+}
+@media (max-height: 800px) {
+    .title-banner.apply hr { margin: 0; height: 0; }
 }
 
 .call {
@@ -537,6 +563,7 @@ article > .block {
 
 .bottom-menu {
     box-shadow: 0 0 5px 5px #9bf;
+
     margin: 10px 0 20px 0;
     padding: 10px 20px;
     background-color: #9bf;
