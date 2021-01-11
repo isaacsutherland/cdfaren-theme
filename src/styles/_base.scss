@@ -348,21 +348,22 @@ article > .block {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
 
     border-top: 1px solid #ddd;
     position: relative;
     background: #d9d4d0;
-    height: 30vw;
-    max-height: calc((100vh - 95px)/2);
     font-family: 'Open Sans', sans-serif;
-    font-size: 2.2vw;
+    font-size: 2.16vw;
 
     .left {
         position: relative;
+        display: flex;
         img {
             width: 54vw;
             height: 30vw;
+            padding: 0;
+            border: 0;
+            margin: 0;
         }
         small {
             display: inline-block;
@@ -373,6 +374,7 @@ article > .block {
 
         hr {
             margin: .2em 0 .4em 0;
+            transition: all .25s;
         }
         div {
             position: absolute;
@@ -385,26 +387,40 @@ article > .block {
             small { display: block; padding: 0; margin: 0; }
         }
     }
+    .right {
+        align-self: center;
+        position: relative;
+        .apply-button {
+            padding: 1em .5em;
+            border-radius: .8em;
+            border: 2px solid #000;
+            background: #bfa;
+            white-space: nowrap;
+            .material-icons { font-size: 400%; vertical-align: baseline; }
+            > div {
+                display: inline-block;
+                > * { display: block; }
+                .now { font-size: 200% }
+                .getyour { margin-bottom: .3em; }
+            }
+        }
+        .footnote {
+            position: absolute;
+            font-size: 50%;
+            margin: .8em 1.6em 0 1.6em;
+        }
+    }
 }
 
 @media (max-height: 800px) {
     .apply-banner hr { margin: 0; height: 0; }
 }
-/*
-@media (max-width: 600px) {
-    /* set font sizes so they don't shrink beyond what is visible * /
-    .apply-banner { min-height: 160px; font-size: 15px;
-        img { min-height: 160px; min-width: 288px; }
-        small { font-size: 9px; }
-    }
-}
 @media (min-width: 167vh) {
-    /* set font sizes so they don't continue to grow * /
-    .apply-banner { height: 50vh; font-size: 4.2vh;
-        small { font-size: 2.5vh; }
+    /* set font sizes so they don't continue to grow */
+    .apply-banner { font-size: 3.6vh;
+        .left img { height: 50vh; width: 90vh; }
     }
 }
-*/
 
 .call {
     display: block;
