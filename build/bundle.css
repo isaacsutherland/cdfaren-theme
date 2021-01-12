@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @import url(https://fonts.googleapis.com/css?family=Overpass:600,700i);
 @charset "UTF-8";
 html {
@@ -106,7 +107,7 @@ h1 {
             flex-grow: 1;
     text-align: right; }
 
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
   .navtop a.ham {
     display: block; }
   .navtop a.link {
@@ -293,8 +294,6 @@ article > .block {
     .title-banner img {
       min-height: 160px;
       opacity: .25; }
-    .title-banner table {
-      min-height: 160px; }
     .title-banner table em {
       font-size: 18px; }
     .title-banner table small {
@@ -321,6 +320,93 @@ article > .block {
       font-size: 3.3vh; }
     .title-banner .clickme {
       font-size: 2.475vh; } }
+
+.apply-banner {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  border-top: 1px solid #ddd;
+  position: relative;
+  background: #d9d4d0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.16vw; }
+  .apply-banner .left {
+    position: relative;
+    display: -webkit-box;
+    display: flex; }
+    .apply-banner .left img {
+      width: 54vw;
+      height: 30vw;
+      padding: 0;
+      border: 0;
+      margin: 0; }
+    .apply-banner .left small {
+      display: inline-block;
+      font-size: 60%;
+      line-height: 1.3em;
+      font-style: italic; }
+    .apply-banner .left hr {
+      margin: .2em 0 .4em 0;
+      -webkit-transition: all .25s;
+      transition: all .25s; }
+    .apply-banner .left div {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      margin: 1em 1em 1em 2em;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 1em;
+      padding: .5em; }
+      .apply-banner .left div small {
+        display: block;
+        padding: 0;
+        margin: 0; }
+  .apply-banner .right {
+    align-self: center;
+    position: relative; }
+    .apply-banner .right .apply-button {
+      padding: 1em .5em;
+      border-radius: .8em;
+      border: 2px solid #000;
+      background: #bfa;
+      white-space: nowrap; }
+      .apply-banner .right .apply-button .material-icons {
+        font-size: 400%;
+        vertical-align: baseline; }
+      .apply-banner .right .apply-button > div {
+        display: inline-block; }
+        .apply-banner .right .apply-button > div > * {
+          display: block; }
+        .apply-banner .right .apply-button > div .now {
+          font-size: 200%; }
+        .apply-banner .right .apply-button > div .getyour {
+          margin-bottom: .3em; }
+    .apply-banner .right .footnote {
+      position: absolute;
+      font-size: 50%;
+      margin: .8em 1.6em 0 1.6em; }
+  .apply-banner a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0; }
+
+@media (max-height: 800px) {
+  .apply-banner hr {
+    margin: 0;
+    height: 0; } }
+
+@media (min-width: 167vh) {
+  /* set font sizes so they don't continue to grow */
+  .apply-banner {
+    font-size: 3.6vh; }
+    .apply-banner .left img {
+      height: 50vh;
+      width: 90vh; } }
 
 .call {
   display: block;
