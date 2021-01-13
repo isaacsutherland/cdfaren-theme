@@ -49,12 +49,12 @@ $indent: 25px;
     }
 
     ul {
-        list-style: none !important; // attempt to override .nested-list .hentry ul>li from new wordpress
         padding: 0;
         margin: 0 !important; // attempt to override .nested-list .hentry ul from new wordpress
     }
     li {
         padding-left: $indent;
+        list-style: none !important; // attempt to override .nested-list .hentry ul>li from new wordpress
         text-indent: -$indent !important; // attempt to override .nested-list .hentry ul>li from new wordpress
         margin-bottom: 10px;
     }
