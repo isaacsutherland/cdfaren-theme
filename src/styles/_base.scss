@@ -184,7 +184,7 @@ article > .block {
     }
     ul {
         padding: 0;
-        margin: 0;
+        margin: 0 !important; // attempt to override .nested-list .hentry ul from new wordpress
         width: 48%;
         width: calc(50% - 20px);
     }
@@ -192,7 +192,7 @@ article > .block {
     ul.right { float: right; }
     ul li {
         background: url(/u/heart-bullet.gif) no-repeat 0 3px;
-        list-style: none;
+        list-style: none !important; // attempt to override .nested-list .hentry ul>li from new wordpress
         padding: 0 0 15px 30px;
     }
     .clear { clear: both; display: block; }
