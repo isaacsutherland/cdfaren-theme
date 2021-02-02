@@ -25,6 +25,7 @@ let search = document.location.search
 if (search) {
     let params = qs.decode(search.substring(1)),
         v = params.v
-    if (v && (v == ('' + parseInt(v, 10))))
+    if (v) {
         document.cookie = `uiversion=${v};domain=.${document.location.hostname};path=/`
+    }
 }
