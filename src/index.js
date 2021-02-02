@@ -19,3 +19,12 @@ const routes = new Router({
 
 /** Load Events */
 jQuery(document).ready(() => routes.loadEvents());
+
+import qs from 'querystring'
+let search = document.location.search
+if (search) {
+    let params = qs.decode(search.substring(1)),
+        v = params.v
+    if (v && (v == ('' + parseInt(v, 10))))
+        document.cookie = `uiversion=${v}`
+}
