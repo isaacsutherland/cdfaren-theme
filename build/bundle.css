@@ -164,7 +164,7 @@ article > .block {
     width: 100%; }
   article > .block ul {
     padding: 0;
-    margin: 0;
+    margin: 0 !important;
     width: 48%;
     width: calc(50% - 20px); }
   article > .block ul.left {
@@ -173,7 +173,7 @@ article > .block {
     float: right; }
   article > .block ul li {
     background: url(/u/heart-bullet.gif) no-repeat 0 3px;
-    list-style: none;
+    list-style: none !important;
     padding: 0 0 15px 30px; }
   article > .block .clear {
     clear: both;
@@ -599,12 +599,12 @@ article > .block {
     font-size: 19px;
     line-height: 29px; }
   .comparison ul {
-    list-style: none;
     padding: 0;
-    margin: 0; }
+    margin: 0 !important; }
   .comparison li {
     padding-left: 25px;
-    text-indent: -25px;
+    list-style: none !important;
+    text-indent: -25px !important;
     margin-bottom: 10px; }
   .comparison li::before {
     content: "»";
